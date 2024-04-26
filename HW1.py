@@ -1,1 +1,1 @@
-print("Good morning, after 1 hour of suffering I finally understood what to do")
+print("Good morning, after 1 hour of constant suffering I finally understood what to do")
