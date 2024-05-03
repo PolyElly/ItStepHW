@@ -12,19 +12,17 @@ class StudySubject:
         print(f'Study: {self.name} | {self.hours}')
 
 
-# subjects = StudySubject(name=input("Subject: "), hours=int(input("Hours: ")), enable=True)
+python = StudySubject(name='Python', hours=18, enable=True)
+
+
 # python.info_study()
-
-subject = [StudySubject(name=input("Subject: "), hours=int(input("Hours: ")), enable=True)]
-append.subject(StudySubject)
-
 
 class Student:
     name: str
     surname: str
-    study: subject
+    study: StudySubject
 
-    def __init__(self, name: str, surname: str, study: subject):
+    def __init__(self, name: str, surname: str, study: StudySubject):
         self.name = name
         self.surname = surname
         self.study = study
@@ -37,5 +35,5 @@ class Student:
         self.study.info_study()
 
 
-student = Student(name=input("Name: "), surname=input("Surname: "), study=subject)
+student = Student(name='uknown_name', surname='unknow_surname', study=python)
 student.info_all()
