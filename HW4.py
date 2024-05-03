@@ -38,5 +38,39 @@ class Teacher(Person):
         self.info_person()
         self.info_teacher()
 
+
+class Student(Person):
+    progress: str
+    group: str
+
+    def __init__(self, progress: str, group: str, name: str, surname: str, age: int):
+        self.progress = progress
+        self.group = group
+        Person.__init__(self, name=name, surname=surname, age=age)
+
+    def info_student(self):
+        print(f'student:\t{self.progress} | {self.group}')
+
+    def info_all(self):
+        self.info_person()
+        self.info_student()
+
+
+class Work(Person):
+    position: str
+    duties: str
+
+    def __init__(self, position: str, duties: str, name: str, surname: str, age: int):
+        self.position = position
+        self.duties = duties
+        Person.__init__(name=name, surname=surname, age=age)
+
+    def info_work(self):
+        print(f'work:\t{self.position} | {self.duties}')
+
+    def info_all(self):
+        self.info_person()
+        self.info_work()
+
 teacher = Teacher(subject='Pycharm', hours=24, name='unknown_name', surname='unknown_surname', age=30)
 teacher.info_all()

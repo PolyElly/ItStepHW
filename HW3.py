@@ -16,6 +16,7 @@ class StudySubject:
 # python.info_study()
 
 subject = StudySubject(name=input("Subject: "), hours=int(input("Hours: ")), enable=True)
+# now how do we put it in list
 
 
 class Student:
